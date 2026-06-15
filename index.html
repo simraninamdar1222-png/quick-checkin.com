@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>How Are You?</title>
+<style>
+body {
+text-align: center;
+font-family: Arial, sans-serif;
+margin-top: 100px;
+}
+
+button {
+padding: 15px 30px;
+margin: 10px;
+font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<h1>How are you?</h1>
+
+<button onclick="sendWhatsApp('Okay')">Okay</button>
+<button onclick="sendWhatsApp('Not Okay')">Not Okay</button>
+
+<script>
+function sendWhatsApp(answer) {
+const number = "+420722085381";
+const message = encodeURIComponent("Response: " + answer);
+window.location.href =
+`https://wa.me/${number}?text=${message}`;
+}
+</script>
+
+</body>
+</html>
